@@ -22,7 +22,6 @@ class Mapper extends  Foundation\Mapper
      */
     protected function instantiateModel(array $data): BiClientPolicies
     {
-
         return parent::instantiateModel($data);
     }
 
@@ -51,8 +50,8 @@ class Mapper extends  Foundation\Mapper
     {
         $queryBuilder = $this->buildSave($this->getQueryBuilder(), 'client_policies', [
             'id' => ':id',
-            'client_id' => ':clientId',
-            'policy_id' => ':policyId',
+            'client_id' => ':client_id',
+            'policy_id' => ':policy_id',
         ], [
             'id' => $clientPolicy->getId(),
             'client_id' => $clientPolicy->getClientId(),

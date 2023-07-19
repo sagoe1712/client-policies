@@ -18,16 +18,19 @@ class Repository extends Foundation\Repository
     }
 
     /**
-     * @param string $name
+     * @param int $clientId
+     * @param int $policyId
      * @param int|null $id
      * @return \sagoe1712\BiClientPolicies\BiClientPolicies
      */
     public function getNew(
-        string $name,
+        int $clientId,
+        int $policyId,
         ?int $id = null
     ): BiClientPolicies\BiClientPolicies {
         return new BiClientPolicies\BiClientPolicies(
-            $name,
+            $clientId,
+            $policyId,
             $id
         );
     }
